@@ -1,4 +1,5 @@
 ﻿using System;
+using ClassLibrary_Calc;
 
 namespace Calc_001
 {
