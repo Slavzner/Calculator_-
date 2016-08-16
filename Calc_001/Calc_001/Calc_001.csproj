@@ -58,9 +58,9 @@
   </Target>
   -->
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary_Calc\ClassLibrary_Calc.csproj">
+    <ProjectReference Include="..\ClassLibrary_Calc\LibraryCalcAlgorithm.csproj">
       <Project>{3790C9C7-D65E-4998-975A-8AC5DFB0DE8C}</Project>
-      <Name>ClassLibrary_Calc</Name>
+      <Name>LibraryCalcAlgorithm</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
