@@ -1,5 +1,5 @@
 ﻿using System;
-using ClassLibrary_Calc;
+using LibraryCalcAlgorithm;
 
 namespace Calc_001
 {

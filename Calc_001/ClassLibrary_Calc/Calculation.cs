@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ClassLibrary_Calc
+namespace LibraryCalcAlgorithm
 {
-    public class Calculation
+    public class CalcAlgorithm
     {
 
     }
