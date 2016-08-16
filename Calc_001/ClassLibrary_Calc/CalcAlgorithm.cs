@@ -4,6 +4,7 @@ namespace LibraryCalcAlgorithm
 {
     public class CalcAlgorithm
     {
+//-------the main methods---------------------------		
 		//the main method that runs the algorithm
 		public double Calculate(string input)
 		{
@@ -11,6 +12,7 @@ namespace LibraryCalcAlgorithm
 		}
 
 
+//-------the secondary methods---------------------------		
 
     }
 }
