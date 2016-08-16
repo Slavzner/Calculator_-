@@ -11,10 +11,10 @@ namespace LibraryCalcAlgorithm
 		public double Calculate(string input)
 		{
 			string output = getConvertion (input);
-			double result = getResult (output);
-			return result;
+			return getResult (output);
 		}
 
+//
 		private string getConvertion(string input)
 		{
 			string output = null;
