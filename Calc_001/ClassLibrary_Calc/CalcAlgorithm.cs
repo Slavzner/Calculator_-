@@ -32,9 +32,12 @@ namespace LibraryCalcAlgorithm
             string output = null;
             Stack<char> opStack = new Stack<char>();
 
+            //loop for checking all chars in input 
             for (int i = 0; i < input.Length; i++)
             {
-
+                if (IsSpace(input[i]))//ignore a spaces
+                     continue;//continue checking
+                    
             }
 
         }
