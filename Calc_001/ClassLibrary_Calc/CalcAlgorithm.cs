@@ -29,7 +29,8 @@ namespace LibraryCalcAlgorithm
         private double getResult(string input)
         {
             Stack<char> opStack = new Stack<char>();
-            Stack<int> numStack = new Stack<int>();
+            Stack<double> numStack = new Stack<double>();
+            double result = 0;
 
             for (int i = 0; i < input.Length; i++)
             {
