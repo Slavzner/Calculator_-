@@ -31,6 +31,12 @@ namespace LibraryCalcAlgorithm
         {
             string output = null;
             Stack<char> opStack = new Stack<char>();
+
+            for (int i = 0; i < input.Length; i++)
+            {
+
+            }
+
         }
 
         /// <summary>
@@ -43,5 +49,23 @@ namespace LibraryCalcAlgorithm
         }
 
         //-------the secondary methods---------------------------
+
+        /// <summary>
+        /// method check if char is space
+        /// </summary>
+        /// <returns></returns>
+        private bool IsSpace(char ch)
+        {
+            if (" ".IndexOf(ch) != -1)
+                return true;
+            return false;
+        }
+
+        private bool IsOperator(char ch)
+        {
+            if ("+*".IndexOf(ch) != -1)
+                return true;
+            return false;
+        }
     }
 }
