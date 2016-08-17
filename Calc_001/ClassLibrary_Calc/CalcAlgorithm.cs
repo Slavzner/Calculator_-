@@ -18,28 +18,7 @@ namespace LibraryCalcAlgorithm
         /// <returns></returns>
         public double Calculate(string input)
         {
-            string output = getConvertion(input);
-            return getResult(output);
-        }
-
-        /// <summary>
-        /// method processing of input data
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        private string getConvertion(string input)
-        {
-            string output = null;
-            Stack<char> opStack = new Stack<char>();
-
-            //loop for checking all chars in input 
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (IsSpace(input[i]))//ignore a spaces
-                     continue;//continue checking
-                    
-            }
-
+            return getResult(input);
         }
 
         /// <summary>
@@ -47,7 +26,7 @@ namespace LibraryCalcAlgorithm
         /// </summary>
         /// <param name="output"></param>
         /// <returns></returns>
-        private double getResult(string output)
+        private double getResult(string input)
         {
         }
 
