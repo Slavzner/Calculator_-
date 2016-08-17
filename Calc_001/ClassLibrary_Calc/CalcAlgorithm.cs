@@ -28,6 +28,15 @@ namespace LibraryCalcAlgorithm
         /// <returns></returns>
         private double getResult(string input)
         {
+            Stack<char> opStack = new Stack<char>();
+            Stack<int> numStack = new Stack<int>();
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (IsSpace(input[i]))//ignore a spaces
+                    continue;//continue checking
+
+            }
         }
 
         //-------the secondary methods---------------------------
