@@ -16,9 +16,10 @@ namespace LibraryCalcAlgorithm
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		public double Calculate(string input)
+		static public double Calculate(string input)
 		{
-			return getResult(input);
+			double output = getResult(input);
+			return output;
 		}
 
 		/// <summary>
@@ -26,18 +27,50 @@ namespace LibraryCalcAlgorithm
 		/// </summary>
 		/// <param name="output"></param>
 		/// <returns></returns>
-		private double getResult(string input)
+		static private double getResult(string _input)
 		{
 			Stack<char> opStack = new Stack<char>();
 			Stack<double> numStack = new Stack<double>();
 			double result = 0;
+			string tempStr = null;
 
-			for (int i = 0; i < input.Length; i++)
+			for (int i = 0; i < _input.Length; i++)
 			{
-				if (IsSpace(input[i]))//ignore a spaces
+				if (IsSpace(_input[i]))//ignore a spaces
 					continue;//continue checking
+				
+				if (IsOperator(_input[i]))
+					opStack.Push(_input[i]);
+
+				if (Char.IsDigit(_input[i]))
+				{
+					while(!IsSpace(_input[i]) && !IsOperator(_input[i]))
+					{
+						tempStr += _input[i];
+						i++;
+						if (i == _input.Length)
+							break;
+					}
+					numStack.Push(double.Parse(tempStr));
+					i--;
+				}
 
 			}
+			double firstOperand = numStack.Pop();
+			double secondOperand = numStack.Pop();
+
+			switch(opStack.Pop())
+			{
+				case '+':
+					result = firstOperand + secondOperand;
+					break;
+				case '*':
+					result = firstOperand * secondOperand;
+					break;
+			}
+
+			numStack.Push(result);
+			return numStack.Peek();
 		}
 
 		//-------the secondary methods---------------------------
@@ -46,7 +79,7 @@ namespace LibraryCalcAlgorithm
 		/// method check if char is space
 		/// </summary>
 		/// <returns></returns>
-		private bool IsSpace(char ch)
+		static private bool IsSpace(char ch)
 		{
 			if (" ".IndexOf(ch) != -1)
 				return true;
@@ -57,7 +90,7 @@ namespace LibraryCalcAlgorithm
 		/// method check if char is operator
 		/// </summary>
 		/// <returns></returns>
-		private bool IsOperator(char ch)
+		static private bool IsOperator(char ch)
 		{
 			if ("+*".IndexOf(ch) != -1)
 				return true;
