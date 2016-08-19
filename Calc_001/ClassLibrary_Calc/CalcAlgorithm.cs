@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace LibraryCalcAlgorithm
@@ -53,6 +53,10 @@ namespace LibraryCalcAlgorithm
 			return false;
 		}
 
+		/// <summary>
+		/// method check if char is operator
+		/// </summary>
+		/// <returns></returns>
 		private bool IsOperator(char ch)
 		{
 			if ("+*".IndexOf(ch) != -1)
