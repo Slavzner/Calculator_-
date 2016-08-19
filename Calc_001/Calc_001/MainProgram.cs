@@ -1,11 +1,8 @@
-﻿using System;
-using LibraryCalcAlgorithm;
-
-namespace Calc_001
+﻿namespace Calc_001
 {
-    class MainProgram
+    internal class MainProgram
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
         }
     }
