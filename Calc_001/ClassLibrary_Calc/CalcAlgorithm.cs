@@ -52,7 +52,8 @@ namespace LibraryCalcAlgorithm
 							break;
 					}
 					numStack.Push(double.Parse(tempStr));
-					i--;
+                    tempStr = null;
+                    i--;
 				}
 
 			}
