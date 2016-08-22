@@ -7,12 +7,12 @@ namespace Calc_001
     {
         private static void Main(string[] args)
         {
-			//CalcAlgorithm myCalc = new CalcAlgorithm();
-			while(true)
-			{
-				Console.WriteLine ("Plesea enter: operator(+,*) num num: ");
-				Console.WriteLine("Result: " + CalcAlgorithm.Calculate(Console.ReadLine()));
-			}
+            //CalcAlgorithm myCalc = new CalcAlgorithm();
+            while (true)
+            {
+                Console.WriteLine("Plesea enter: operator(+,*) num num: ");
+                Console.WriteLine("Result: " + CalcAlgorithm.Calculate(Console.ReadLine()));
+            }
         }
     }
 }
