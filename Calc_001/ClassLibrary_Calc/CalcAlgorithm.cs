@@ -18,8 +18,7 @@ namespace LibraryCalcAlgorithm
         /// <returns></returns>
         static public double Calculate(string input)
         {
-            double output = getResult(input);
-            return output;
+            return getResult(input);
         }
 
         /// <summary>
