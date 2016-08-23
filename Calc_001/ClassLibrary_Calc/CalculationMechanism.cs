@@ -32,6 +32,8 @@ namespace Calc.Mechanism
             Stack<double> numStack = new Stack<double>();
             double result = 0;
             string tempStr = null;
+            char delimiter = ' ';
+            string inputStr = null;
 
             for (int i = 0; i < _input.Length; i++)
             {
@@ -43,13 +45,14 @@ namespace Calc.Mechanism
 
                 if (Char.IsDigit(_input[i]))
                 {
-                    do
-                    {
-                        tempStr += _input[i];
-                        i++;
-                        if (i == _input.Length)
-                            break;
-                    } while (!IsSpace(_input[i]) && !IsOperator(_input[i]));
+                    //do
+                    //{
+                    //    tempStr += _input[i];
+                    //    i++;
+                    //    if (i == _input.Length)
+                    //        break;
+                    //} while (!IsSpace(_input[i]) && !IsOperator(_input[i]));
+
 
                     numStack.Push(double.Parse(tempStr));
                     tempStr = null;
