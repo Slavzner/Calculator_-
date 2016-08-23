@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LibraryCalcAlgorithm
+namespace Calc.Mechanism
 {
     /// <summary>
     /// Library Class of calculation algorithm
     /// </summary>
-    public class CalcAlgorithm
+    public class CalculationMechanism
     {
         //-------the main methods---------------------------
 
