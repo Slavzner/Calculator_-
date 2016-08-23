@@ -28,7 +28,7 @@ namespace LibraryCalcAlgorithm
         /// <returns></returns>
         static private double getResult(string _input)
         {
-            Stack<char> opStack = new Stack<char>();
+            char opStack = ' ';
             Stack<double> numStack = new Stack<double>();
             double result = 0;
             string tempStr = null;
@@ -39,7 +39,7 @@ namespace LibraryCalcAlgorithm
                     continue;//continue checking
 
                 if (IsOperator(_input[i]))
-                    opStack.Push(_input[i]);
+                    opStack = _input[i];
 
                 if (Char.IsDigit(_input[i]))
                 {
@@ -59,7 +59,7 @@ namespace LibraryCalcAlgorithm
             double firstOperand = numStack.Pop();
             double secondOperand = numStack.Pop();
 
-            switch (opStack.Pop())
+            switch (opStack)
             {
                 case '+':
                     result = firstOperand + secondOperand;
