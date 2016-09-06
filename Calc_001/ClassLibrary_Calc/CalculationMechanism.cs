@@ -69,6 +69,11 @@ namespace Calc.Mechanism
 
         //-------the secondary methods---------------------------
 
+        /// <summary>
+        /// this method checks if input is correct
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         static private bool checkInput(string[] str)
         {
             int count = 0;
