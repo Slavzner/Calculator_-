@@ -31,36 +31,19 @@ namespace Calc.Mechanism
             char opStack = ' ';
             Stack<double> numStack = new Stack<double>();
             double result = 0;
-            string [] tempStr = null;
-            
-            string inputStr = null;
+            string [] tempStr = null;                    
+            char[] delimiter = { ' ' };
+            //use Split method
+            tempStr = _input.Split(delimiter);
 
-            for (int i = 0; i < _input.Length; i++)
-            {
-                if (IsSpace(_input[i]))//ignore a spaces
-                    continue;//continue checking
+            opStack = char.Parse(tempStr[0]);
+            numStack.Push(double.Parse(tempStr[1]));
+            numStack.Push(double.Parse(tempStr[2]));
+            tempStr = null;
 
-                if (IsOperator(_input[i]))
-                    opStack = _input[i];
-
-                if (Char.IsDigit(_input[i]))
-                {
-                    //do
-                    //{
-                    //    tempStr += _input[i];
-                    //    i++;
-                    //    if (i == _input.Length)
-                    //        break;
-                    //} while (!IsSpace(_input[i]) && !IsOperator(_input[i]));
-
-
-                    numStack.Push(double.Parse(tempStr));
-                    tempStr = null;
-                    i--;
-                }
-            }
             double firstOperand = numStack.Pop();
             double secondOperand = numStack.Pop();
+
 
             switch (opStack)
             {
@@ -77,34 +60,6 @@ namespace Calc.Mechanism
             return numStack.Peek();
         }
 
-        //-------the secondary methods---------------------------
-
-        /// <summary>
-        /// method check if char is space
-        /// </summary>
-        /// <returns></returns>
-        static private bool IsSpace(char ch)
-        {
-            if (" ".IndexOf(ch) != -1)
-                return true;
-            return false;
-        }
-
-        /// <summary>
-        /// method check if char is operator
-        /// </summary>
-        /// <returns></returns>
-        static private bool IsOperator(char ch)
-        {
-            if ("+*".IndexOf(ch) != -1)
-                return true;
-            return false;
-        }
-
-        static private string [] mySplit()
-        {
-            char [] delimiter = { ' ' };
-
-        }
+                
     }
 }
