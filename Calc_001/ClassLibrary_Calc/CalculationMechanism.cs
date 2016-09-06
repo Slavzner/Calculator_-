@@ -31,8 +31,8 @@ namespace Calc.Mechanism
             char opStack = ' ';
             Stack<double> numStack = new Stack<double>();
             double result = 0;
-            string tempStr = null;
-            char delimiter = ' ';
+            string [] tempStr = null;
+            
             string inputStr = null;
 
             for (int i = 0; i < _input.Length; i++)
@@ -99,6 +99,12 @@ namespace Calc.Mechanism
             if ("+*".IndexOf(ch) != -1)
                 return true;
             return false;
+        }
+
+        static private string [] mySplit()
+        {
+            char [] delimiter = { ' ' };
+
         }
     }
 }
