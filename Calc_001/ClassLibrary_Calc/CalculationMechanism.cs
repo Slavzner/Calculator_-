@@ -36,6 +36,13 @@ namespace Calc.Mechanism
             //use Split method
             tempStr = _input.Split(delimiter);
 
+            if (!checkInput(tempStr))
+            {
+                Console.WriteLine("Invalid input");
+                return -1;
+            }
+               
+
             opStack = char.Parse(tempStr[0]);
             numStack.Push(double.Parse(tempStr[1]));
             numStack.Push(double.Parse(tempStr[2]));
@@ -60,6 +67,35 @@ namespace Calc.Mechanism
             return numStack.Peek();
         }
 
-                
+        //-------the secondary methods---------------------------
+
+        static private bool checkInput(string[] str)
+        {
+            int count = 0;
+            bool firtsOp = false;
+
+            for(int i = 0; i <str.Length; i++)
+            {
+                if ((i == 0) && IsOperator(char.Parse(str[0])))
+                    firtsOp = true;
+                if (IsOperator(char.Parse(str[i])))
+                    count++;                   
+            }
+            if ((firtsOp && count != 1) || !firtsOp )
+                return false;
+            else return true;
+
+        }
+
+        /// <summary>
+        /// method check if char is operator
+        /// </summary>
+        /// <returns></returns>
+        static private bool IsOperator(char ch)
+        {
+            if ("+*".IndexOf(ch) != -1)
+                return true;
+            return false;
+        }
     }
 }
